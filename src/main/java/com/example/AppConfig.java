@@ -15,13 +15,13 @@ import redis.clients.jedis.JedisPoolConfig;
 @Component
 public class AppConfig {
 
-	public AppConfig() {
-		super();
-	}
+    public AppConfig() {
+        super();
+        }
 
-	@Bean
-	JedisPool jedisPool() {
-		return new JedisPool(new JedisPoolConfig(), "localhost"); 
-	}
-	
+    @Bean
+    JedisPool jedisPool() {
+        return new JedisPool(new JedisPoolConfig(), "localhost"); 
+    }
 }
+

@@ -5,47 +5,45 @@ import javax.validation.constraints.Size;
 
 public class UBXRequest {
 
-	@Size(min=1, max=10)
-	@NotNull
-	private String id;
-	
-	@Size(min=3, max=30)
-	@NotNull
-	private String name;
-	
-	@Size(min=3, max=30)
-	@NotNull
-	private String filename;
+    @Size(min=1, max=10)
+    @NotNull
+    private String id;
 
-	public String getId() {
-		return id;
-	}
+    @Size(min=3, max=30)
+    @NotNull
+    private String name;
 
-	public void setId(String id) {
-		this.id = id;
-	}
+    @Size(min=3, max=30)
+    @NotNull
+    private String filename;
 
-	public String getName() {
-		return name;
-	}
+    public String getId() {
+        return id;
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public void setId(String id) {
+        this.id = id;
+    }
 
-	public String getFilename() {
-		return filename;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public void setFilename(String filename) {
-		this.filename = filename;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	@Override
-	public String toString() {
-		return "UBXRequest [id=" + id + ", name=" + name + ", filename=" + filename + "]";
-	}
-	
-	
+    public String getFilename() {
+        return filename;
+    }
+
+    public void setFilename(String filename) {
+        this.filename = filename;
+    }
+
+    @Override
+    public String toString() {
+        return "UBXRequest [id=" + id + ", name=" + name + ", filename=" + filename + "]";
+    }
 }
 
