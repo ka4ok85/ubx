@@ -21,6 +21,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.example.UbxApplication;
 import com.example.mvcmodels.UBXRequest;
+import com.example.service.Processor;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonObject;
@@ -100,4 +101,14 @@ public class WelcomeController {
         
         return "test-success";
     }
+    
+    @RequestMapping(value="/process", method=RequestMethod.GET)
+    public String processRequests(Model model) {
+    	
+    	Processor processor = new Processor(newRequestSetName, processedRequestSetName, 2);
+    	processor.run();
+    	
+        return "process-success";
+    }
+
 }
